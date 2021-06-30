@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<header>
+	<div id="doc">
+
+<img width="100" height="100" border="5" alt="Deepu Bhai" usemap="#workmap" src="https://raw.githubusercontent.com/Deepak9829/IMAGES/master/large_v-trans.png"> </img>
+
+</div>
+<style type="text/css">
+
+  img {
+       
+  border-radius: 100px;
+}
+
+</style>
+
+
+<style>
+
+      div#doc {
+  width: 1px;
+  height: 1px;
+  color: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  
+}
+
+@keyframes example {
+  /*
+  0%   {background-color:red; left:0px; top:0px;}
+  100%  {background-color:yellow; left:1360px; top:0px;}
+  */
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:red; left:1370px; top:0px;}
+  50%  {background-color:blue; left:1370px; top:550px;}
+  75%  {background-color:green; left:0px; top:550px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+</style>
+</header>
+<div class="header">
+    <center>
+	<div class="header-logo"> <h1> </h1>
+	</center>
+	</div>
+        <div class="header-list">
+           
+           
+        </div>
+      </div>
+
+<style> 
+	
+
+
+    body{
+    
+        background-image: url(docker-bg.png);
+        background-color:#e0e000;
+	height:100%;
+	width:100%;
+        opacity:0.8;
+
+     }
+	
+	
+
+    .header-logo {
+         background-color: green
+         class: "w3-spin"
+    } 
+	
+	
+    header {
+
+        text-align:center;
+
+    }
+	
+	
+
+    #inp1 {
+        display: flex;
+        justify-content: center;
+        font-family: 'Patua One', cursive;
+        margin:50px 0px;
+        font-size:1.2rem;
+    }
+	
+	
+    button{
+        margin: 10px;
+        border: black solid 2px;
+        background-color:#42d7f9 ;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+	
+	
+    button:hover{
+        background-color:red;
+        font-weight: bolder;
+        cursor: pointer;
+    }
+	
+	
+
+    #box {
+        width: 30rem;
+        height: 1.5rem;
+        border-radius: 8px;
+        font-family: 'Patua One', cursive;
+        font-size:1.2rem;
+    }
+	
+	
+
+    h1 {
+        font-family:  'times', cursive;
+        font-size: 3rem;
+        height: 6rem;
+    }
+	
+	
+
+    #output {
+        margin:100;
+        display:inline-block;
+        box-shadow:3px 2px 6px 2px #0a0d16;
+        padding:22px 33px;
+        max-width:52rem;
+        font-family:'Patua One', cursive;
+        z-index:10;
+        font-size:1.2rem;
+        background-color:#00FFFF
+    }
+	
+	
+	
+</style>
+
+
+
+<body>
+	
+    <header>
+        <h1>Docker WebApp <img src="https://img.icons8.com/color/50/4a90e2/docker.png"/></h1>
+        <div id="inp1">
+           <b> Enter ur command 👉</b><input id="box">
+            <button onclick="op()">Click here</button>
+
+        </div>
+        <pre>
+        <span id="output"></span>
+        </pre>
+    </header>
+
+</body>
+	
+	
+<script>
+    function op() {
+        var xhr = new XMLHttpRequest();
+        i=document.getElementById("box").value
+        xhr.open("GET","http://192.168.43.85/cgi-bin/code.py?x="+i,true);
+        xhr.send();
+
+        xhr.onload=function(){
+            var output = xhr.responseText;
+        document.getElementById('output').innerHTML = output;
+        }
+    }
+</script>
+	
+	
+
+</html>
