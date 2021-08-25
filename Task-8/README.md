@@ -1,8 +1,8 @@
-#Task 08 👨🏻💻
+# Task 08 👨🏻💻
 
-#Object Recognition using CNN model
+# Object Recognition using CNN model
 
-###Task Description 📄
+### Task Description 📄
 
 📌 In this task :
 👉Create a model that will detect a car in a live stream or video and recognize characters on number plate of the car .
