@@ -1,5 +1,5 @@
 # MLOPS-Intern-Tasks
-### This is repo for all my Mlops Summer Intern 
+### This is repo for all my Mlops Summer Intern learning.
 
 
 In this I have learned many in-demand technologies like:
